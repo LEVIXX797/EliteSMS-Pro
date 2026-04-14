@@ -1,0 +1,57 @@
+@import url('https://googleapis.com');
+
+:root {
+    --primary: #6366f1;
+    --accent: #10b981;
+    --dark: #020617;
+    --card: #0f172a;
+}
+
+body {
+    background-color: var(--dark);
+    color: #f8fafc;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Luxury Elements */
+.auth-layout { height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.glow-bg {
+    position: absolute; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+}
+
+.auth-card, .glass-modal {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem; border-radius: 30px; width: 100%; max-width: 420px;
+}
+
+.btn-main {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white; border: none; padding: 14px; border-radius: 12px;
+    font-weight: 700; transition: 0.3s;
+}
+
+.btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(99,102,241,0.4); }
+
+.wallet-hero {
+    background: linear-gradient(135deg, #1e1b4b 0%, #020617 100%);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 40px; border-radius: 35px; margin-bottom: 50px;
+}
+
+.service-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px; padding: 30px; transition: 0.4s; cursor: pointer;
+    text-align: center;
+}
+
+.service-card:hover {
+    background: rgba(99,102,241,0.1);
+    border-color: var(--primary);
+    transform: translateY(-10px) scale(1.02);
+}
+
+.logo-text span { color: var(--primary); }

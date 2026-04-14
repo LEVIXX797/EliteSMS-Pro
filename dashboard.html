@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EliteSMS Dashboard</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">ELITE<span>SMS</span></a>
+            <div class="nav-right">
+                <a href="orders.html" class="nav-icon"><i class="fas fa-box-open"></i></a>
+                <div class="user-pill">
+                    <img id="userAvatar" src="https://ui-avatars.com" class="rounded-circle">
+                    <span id="userName" class="ms-2 d-none d-md-inline">User</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="wallet-hero shadow-lg animate-in">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p class="small text-uppercase opacity-75">Available Credit</p>
+                    <h1 class="balance-display" id="userBalance">$0.00</h1>
+                </div>
+                <div class="col-md-5">
+                    <div class="deposit-box">
+                        <input type="number" id="depositAmt" placeholder="0.00">
+                        <button id="depositBtn">Deposit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold m-0">Select Service</h5>
+            <select class="form-select w-auto bg-dark text-white border-secondary" id="countryFilter">
+                <option value="IN">🇮🇳 India (+91)</option>
+                <option value="US">🇺🇸 USA (+1)</option>
+            </select>
+        </div>
+
+        <div class="row g-4" id="servicesGrid">
+            <!-- Loaded by JS -->
+        </div>
+    </div>
+
+    <!-- Purchase Confirmation -->
+    <div class="modal fade" id="buyModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-modal">
+                <div class="modal-body p-4 text-center">
+                    <div class="service-preview mb-4">
+                        <img id="m-icon" src="" width="60">
+                        <h4 id="m-name" class="mt-2 fw-bold"></h4>
+                        <p class="text-primary fw-bold" id="m-price"></p>
+                    </div>
+                    <button id="confirmOrder" class="btn-main w-100">CONFIRM PURCHASE</button>
+                    <p class="small text-muted mt-3">OTP will be delivered instantly to your Orders page.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://razorpay.com"></script>
+    <script src="https://jsdelivr.net"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
